@@ -2,6 +2,8 @@ import flet as ft
 
 
 def main(page: ft.Page):
+    page.bgcolor=ft.Colors.DEEP_ORANGE_100
+
     page.add(
         ft.AutofillGroup(
             ft.Column(
@@ -24,9 +26,13 @@ def main(page: ft.Page):
                     ),
                     ft.TextField(
                         label="Postal Code",
-                        autofill_hints=ft.AutofillHint.POSTAL_CODE,
+                        autofill_hints=ft.AutofillHint.USERNAME,
                     ),
                 ]
             )
         )
     )
+
+
+# run with 'flet run -w'
+ft.app(main)
